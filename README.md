@@ -20,7 +20,7 @@ Instead of providing visuals of what the frontend (your task) should look like, 
 
 **Important Note**: Throughout this specification, certain elements are required to be declared with specific DOM element types, IDs, and classes. Please follow these requirements carefully, as they are essential for testing and functionality.
 
-### 2.1. Milestone 1 - Registration & Login (10%)
+### 2.1. Milestone 1 - Registration & Login (8%)
 
 Milestone 1 focuses on the basic user interface to register and log in to the site.
 
@@ -49,7 +49,7 @@ Milestone 1 focuses on the basic user interface to register and log in to the si
  * For now, the dashboard will be a blank screen that contains only a "logout" button visible at all times. [`DOMElement` with id: `logout-button`]
  * When this logout button is pressed, it removes the token from the state of the website (e.g. local storage) and then sends the user back to the login screen.
 
-### 2.2. Milestone 2 - Making Threads (15%)
+### 2.2. Milestone 2 - Making Threads (12%)
 
 Milestone 2 focuses on how to make a thread and then view that thread (along with others).
 
@@ -92,7 +92,7 @@ Milestone 2 focuses on how to make a thread and then view that thread (along wit
 * This page will later on include things like edit, delete, like, watch, comments etc, but you can skip this for `2.2.3`.
 * Private threads are only visible to users who are an admin or the creator of that thread.
 
-### 2.3. Milestone 3 - Thread Interactions (10%)
+### 2.3. Milestone 3 - Thread Interactions (8%)
 
 Milestone 3 focuses on how to interact with threads once they've been made
 
@@ -128,7 +128,7 @@ Milestone 3 focuses on how to interact with threads once they've been made
 * If the thread is currently watched by this user, the button should imply visually that clicking it will unwatch the thread. If the thread is currently not watched by this user, the button should visually imply clicking it will cause it to be watched.
 * Any watching or unwatching should reflect a change in the UI immediately.
 
-### 2.4. Milestone 4 - Comments (15%)
+### 2.4. Milestone 4 - Comments (12%)
 
 Milestone 4 focuses on commenting features once the threads have been made.
 
