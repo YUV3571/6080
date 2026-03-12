@@ -1,4 +1,5 @@
 # Changelog
+2026.03.12: Update backend repo link
 
 # Assessment 3 (HTML, CSS, Vanilla JS)
 
@@ -14,7 +15,7 @@ In this assignment you are working on the frontend.
 
 Your task is to build a frontend for a UNSW rip-off version of the popular forum [EdStem](https://edstem.org).
 
-UNSW's rip-off of EdStem is called "Qanda". However, you don't have to build the entire application. You only have to build the frontend. The [backend](https://gitlab.cse.unsw.edu.au/undergraduate-courses/COMP6080/26T1/ass3-backend) is already built for you as an express server built in NodeJS (see spec).
+UNSW's rip-off of EdStem is called "Qanda". However, you don't have to build the entire application. You only have to build the frontend. The [backend](https://gitlab.cse.unsw.edu.au/coursework/COMP6080/26T1/ass3-backend) is already built for you as an express server built in NodeJS (see spec).
 
 Instead of providing visuals of what the frontend (your task) should look like, we instead are providing you with a number of clear and short requirements about expected features and behaviours.
 
