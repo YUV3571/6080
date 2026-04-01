@@ -1,0 +1,11 @@
+image: alpine:latest
+
+stages:
+  - checks
+
+linechecking:
+  stage: checks
+  before_script:
+    - apk add --no-cache bash git
+  script:
+    - bash ./util/pre-commit.sh

@@ -1,0 +1,584 @@
+/* set brand colour variable */
+:root {
+    --color-brand-bg: #5b5bd6;
+}
+
+/* reset default browser styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* sticky top nav */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding: 0 50px;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #222222;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.nav-left a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-login {
+    font-size: 14px;
+    font-weight: 400;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.nav-signup {
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    background-color: #f5f5f5;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* hamburger only shows on mobile - hidden by default */
+.nav-hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.nav-hamburger img {
+    display: block;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* hero heading + subtext centred */
+.hero {
+    padding: 74px 24px 82px;
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 76px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -2.5px;
+    line-height: 1.06;
+}
+
+.hero p {
+    max-width: 404px;
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 400;
+    color: #6b6b6b;
+    line-height: 1.65;
+}
+
+/* used as a line break on small screens only */
+.hero-break {
+    display: none;
+}
+
+/* pricing cards grid wrapper */
+.pricing-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 42px 40px 80px;
+}
+
+.pricing-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    align-items: stretch;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    overflow: visible;
+}
+
+/* base styles shared by all plan cards */
+.plan-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 30px;
+    background-color: #0d0d0d;
+    border-right: 1px solid #2a2a2a;
+}
+
+.plan-card:first-child {
+    border-radius: 16px 0 0 16px;
+}
+
+.plan-card.enterprise-full {
+    border-right: none;
+    border-radius: 0 16px 16px 0;
+}
+
+/* business card pops out above/below the grid */
+.plan-card.business {
+    z-index: 2;
+    margin-top: -20px;
+    margin-bottom: -45px;
+    padding-top: 52px;
+    padding-bottom: 48px;
+    background-color: #1a1a1a;
+    border: 1px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px #2a2a2a;
+}
+
+/* fixed heights keep the horizontal dividers lined up across all cards */
+.plan-card.business .plan-top {
+    height: 70px;
+}
+
+.plan-card.business .plan-middle {
+    height: 52px;
+}
+
+.plan-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+    height: 70px;
+}
+
+.plan-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 52px;
+}
+
+.plan-name {
+    margin-bottom: 6px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.plan-price {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.plan-price strong {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.plan-price .muted {
+    font-weight: 400;
+    color: #888888;
+}
+
+.plan-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: #888888;
+    line-height: 1.4;
+}
+
+.plan-tagline {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+}
+
+/* divider line stretches edge to edge inside the card padding */
+.plan-hr {
+    margin: 8px -30px;
+    padding: 0 30px;
+    border: none;
+    border-top: 1px solid #2a2a2a;
+}
+
+/* toggle switch + label */
+.billing-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.billing-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+.toggle-wrap {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.toggle-wrap input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background-color: #5b5bd6;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* the sliding circle inside the toggle */
+.toggle-slider::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 17px;
+    height: 17px;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.toggle-wrap input:checked + .toggle-slider::after {
+    transform: translateX(17px);
+}
+
+/* feature list fills remaining card space, pushing button to bottom */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 14px;
+    list-style: none;
+    padding-top: 14px;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.features-list li span {
+    color: #ffffff;
+}
+
+.features-list li img {
+    display: block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    filter: invert(35%) sepia(90%) saturate(600%) hue-rotate(215deg) brightness(100%);
+}
+
+/* dotted underline on linked feature names */
+.feat-link {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #666666;
+    text-underline-offset: 3px;
+}
+
+.feat-link-large {
+    text-decoration: none;
+}
+
+/* call to action buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.btn:hover {
+    filter: brightness(125%);
+}
+
+.btn-dark {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #3a3a3a;
+}
+
+.btn-white {
+    background-color: #f0f0f0;
+    color: #111111;
+    font-weight: 600;
+}
+
+.contact-sales {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #777777;
+    text-align: center;
+}
+
+.contact-sales a {
+    color: #aaaaaa;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* hidden by default, shown as block on large screens via media query below */
+.zendesk-break {
+    display: none;
+}
+
+/* ---- large screens ---- */
+@media (min-width: 769px) {
+    body {
+        zoom: 0.85;
+    }
+
+    .feat-link-large {
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: #666666;
+        text-underline-offset: 3px;
+    }
+
+    .enterprise-small-only .features-list,
+    .enterprise-small-only .btn,
+    .enterprise-small-only .plan-hr,
+    .enterprise-small-only .plan-tagline {
+        display: none;
+    }
+
+    .zendesk-break {
+        display: block;
+    }
+
+    .enterprise-small-only {
+        display: none;
+    }
+
+    .enterprise-full {
+        display: flex;
+    }
+}
+
+/* ---- medium screens: switch to 2-column grid ---- */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .pricing-section {
+        padding: 20px 28px 80px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 14px;
+        overflow: visible;
+    }
+
+    .plan-card:nth-child(odd) {
+        border-right: 1px solid #2a2a2a;
+    }
+
+    .plan-card:nth-child(even) {
+        border-right: none;
+    }
+
+    .plan-card:nth-child(1),
+    .plan-card:nth-child(2) {
+        border-bottom: 1px solid #2a2a2a;
+    }
+
+    .plan-card.business {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+/* ---- mobile: stack cards vertically ---- */
+@media (max-width: 768px) {
+    .hero-break {
+        display: block;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+        gap: 16px;
+        height: 52px;
+        padding: 0 20px;
+    }
+
+    .nav-left {
+        display: none;
+    }
+
+    .nav-login {
+        margin-right: 100;
+    }
+
+    .nav-right {
+        gap: 12px;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .hero {
+        padding: 52px 24px 48px;
+    }
+
+    .hero h1 {
+        margin-bottom: 14px;
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 15px;
+        color: #777777;
+    }
+
+    .pricing-section {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 40px 40px 100px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .plan-card {
+        padding: 24px 20px 28px;
+        border-right: none;
+        border-bottom: 1px solid #2a2a2a;
+        border-radius: 0;
+    }
+
+    .plan-card:first-child {
+        border-radius: 0;
+    }
+
+    .plan-card:last-of-type,
+    .plan-card.enterprise-full {
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    /* reset business card elevation on mobile */
+    .plan-card.business {
+        margin-top: 0;
+        margin-bottom: -20px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        background-color: #1a1a1a;
+        border: none;
+        border-bottom: 1px solid #2a2a2a;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    /* release fixed heights since cards are stacked */
+    .plan-top {
+        height: auto;
+        margin-bottom: 4px;
+    }
+
+    .plan-middle {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .plan-name {
+        font-size: 28px;
+    }
+
+    .plan-hr {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .enterprise-small-only {
+        display: block;
+        margin-top: 28px;
+    }
+
+    .enterprise-full {
+        display: none;
+    }
+}

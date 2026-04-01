@@ -1,0 +1,309 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: calc(3000px + 24px);
+    font-family: monospace;
+    background-color: #eef0f3;
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+
+.hero-section {
+    background-color: #eef0f3;
+    padding: 90px 429px 99px 429px;
+}
+
+.hero-title {
+    font-family: monospace;
+    font-size: 56px;
+    font-weight: 900;
+    color: #111111;
+    line-height: 1.19;
+    margin-bottom: 52px;
+    letter-spacing: -0.48px;
+}
+
+.hero-title .dot {
+    color: #e8470a;
+}
+
+/* =============================================
+   TAB BAR
+   ============================================= */
+
+.tab-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 23px;
+    gap: 49px;
+}
+
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.tab-icon-wrap {
+    width: 71px;
+    height: 71px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1.4px solid #d8dbe2;
+    box-shadow:
+        0 9px 14px -3px rgba(0,0,0,0.2),
+        0 3px 5px -2px rgba(0,0,0,0.1),
+        inset 0 -2px 0 rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+.tab-icon-wrap.active {
+    background-color: #e8470a;
+    border-color: #e8470a;
+    box-shadow:
+        0 14px 18px -5px rgba(232,71,10,0.3),
+        0 7px 9px -4px rgba(0,0,0,0.2),
+        inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.tab-icon-wrap.active img {
+    filter: brightness(0) invert(1);
+}
+
+.tab-icon-wrap svg {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.tab-label {
+    font-family: monospace;
+    font-size: 15px;
+    color: #222222;
+    font-weight: 500;
+}
+
+/* =============================================
+   RETURN DROPDOWN
+   ============================================= */
+
+.return-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.return-row span {
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.return-row .chevron-down svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* =============================================
+   SEARCH BAR
+   ============================================= */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1.4px solid #d8dbe2;
+    border-radius: 16px;
+    height: 71px;
+    padding-right: 10px;
+    width: calc(1100px + 50px);
+    box-shadow:
+        0 14px 22px -8px rgba(0,0,0,0.2),
+        0 5px 9px -4px rgba(0,0,0,0.1);
+}
+
+.field-from {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.chip-sydney {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eef0f3;
+    border-radius: 10px;
+    padding: 7px 14px;
+    font-family: monospace;
+    font-size: 16px;
+    color: #111111;
+}
+
+.field-to {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    height: 100%;
+    flex: 1;
+}
+
+.sep {
+    width: 0.9px;
+    height: 38px;
+    background: #d8dbe2;
+}
+
+.field-dates {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 35px;
+    height: 100%;
+}
+
+.field-pax {
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    height: 100%;
+}
+
+.search-btn {
+    width: 55px;
+    height: 55px;
+    background: #e8470a;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+/* =============================================
+   DEALS SECTION
+   ============================================= */
+
+.deals-section {
+    background-color: #ffffff;
+    padding: 74px 429px 90px 429px;
+}
+
+.deals-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 39px;
+    width: calc(1400px + 100px);
+}
+
+.deals-title {
+    font-family: monospace;
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.explore-more-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* =============================================
+   DEAL CARDS
+   ============================================= */
+
+.cards-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    width: calc(1400px + 100px);
+    padding: 10px;
+}
+
+.deal-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1.4px solid #d8dbe2;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow:
+        0 9px 18px rgba(0,0,0,0.1),
+        0 5px 5px rgba(0,0,0,0.08);
+}
+
+.deal-card-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin: 7px;
+    width: calc(100% - 14px);
+}
+
+.deal-card-body {
+    padding: 27px 26px 30px 26px;
+}
+
+.deal-card-city {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+
+.deal-card-meta {
+    font-family: monospace;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.55;
+    margin-bottom: 21px;
+}
+
+.deal-card-price {
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* =============================================
+   NAVIGATION ARROWS
+   ============================================= */
+
+.nav-arrows {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 1.4px solid #d8dbe2;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
