@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Form Fiddle</title>
+  </head>
+  <body>
+    <div class="formContainer">
+      <h1>Form Fiddle</h1>
+      <form>
+        <div class="nameContainer">
+          <div class="inputContainer">
+            <label for="preferredName">Preferred Name</label>
+            <input type="text" id="preferredName" name="preferredName" />
+          </div>
+          <div class="inputContainer">
+            <label for="familyName">Family Name</label>
+            <input type="text" id="familyName" name="familyName" />
+          </div>
+        </div>
+
+        <div class="inputContainer">
+          <label for="unswEmail">UNSW Email</label>
+          <input type="text" id="unswEmail" name="unswEmail" />
+        </div>
+        <div class="inputContainer">
+          <label for="wam">WAM</label>
+          <input type="text" id="wam" name="wam" />
+        </div>
+        <div class="inputContainer">
+          <label for="specialisation">Specialisation</label>
+          <select id="specialisation" name="specialisation">
+            <option value="Artificial Intelligence">
+              Artificial Intelligence
+            </option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Database Systems">Database Systems</option>
+            <option value="Embedded Systems">Embedded Systems</option>
+            <option value="Security Engineering">Security Engineering</option>
+          </select>
+        </div>
+
+        <div class="favStudyLocationsContainer">
+          <label>Favourite Study Locations</label>
+          <div class="checklistContainer">
+            <label>
+              <input type="checkbox" id="selectAll" name="selectAll" />
+              Select All
+            </label>
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox" id="mainLibrary" name="Main Library" />
+                  Main Library
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" id="lawLibrary" name="Law Library" />
+                  Law Library
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="scienceEngineeringBuilding"
+                    name="Science and Engineering Building"
+                  />
+                  Science and Engineering Building
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" id="resetButton">Reset</button>
+        <textarea id="outputText"></textarea>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
